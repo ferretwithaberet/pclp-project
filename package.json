@@ -1,0 +1,17 @@
+{
+  "name": "pclp-project",
+  "version": "1.0.0",
+  "description": "Project for my PCLP course.",
+  "main": "index.js",
+  "repository": "git@github.com:ferretwithaberet/pclp-project.git",
+  "author": "Andrei Rădoi <andreiradoidev@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "initial-setup": "yarn && concurrently \"cd backend && yarn\" \"cd frontend && yarn\"",
+    "dev": "concurrently \"cd backend && yarn dev\" \"cd frontend && yarn start\"",
+    "start": "cd frontend && yarn build && cd ../backend && yarn start"
+  },
+  "devDependencies": {
+    "concurrently": "^6.4.0"
+  }
+}
